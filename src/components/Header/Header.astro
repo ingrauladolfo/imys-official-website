@@ -1,0 +1,71 @@
+---
+import headerData from "@/assets/data/components/Header/headerData";
+import headerSocialData from "@/assets/data/components/Header/headerSocialData";
+import "@/assets/styles/components/Header/header.css";
+import type { HeaderDataInfo } from "@/assets/ts/HeaderDataInfo";
+import type { HeaderSocialDataInfo } from "@/assets/ts/HeaderSocialDataInfo";
+
+const header: HeaderDataInfo[] = headerData;
+const headerSocial: HeaderSocialDataInfo[] = headerSocialData;
+---
+
+<header>
+  <nav class="navbar">
+    <div class="logo">
+      <img src="/logo.png" alt="Logo" />
+    </div>
+    <div class="menu-icon">
+      <i class="bx bx-menu-alt-right menu-icon-img"></i>
+    </div>
+    <div class="navigation">
+      {header.map(({ title, href }) => <a href={href}>{title}</a>)}
+    </div>
+    <div class="social-media">
+      {
+        headerSocial.map(({ socialClass, socialLink }) => (
+          <a href={socialLink} target="_blank">
+            <i class={socialClass} />
+          </a>
+        ))
+      }
+    </div>
+  </nav>
+  <div class="mobile-navigation">
+    <div class="navigation">
+      {header.map(({ title, href }) => <a href={href}>{title}</a>)}
+    </div>
+    <div class="social-media">
+      {
+        headerSocial.map(({ socialClass, socialLink }) => (
+          <a href={socialLink} target="_blank">
+            <i class={socialClass} />
+          </a>
+        ))
+      }
+    </div>
+    <i class="bx bx-x close-icon"></i>
+    <!-- Icono de cierre para el menú móvil -->
+  </div>
+</header>
+<script is:inline>
+  document.addEventListener("DOMContentLoaded", function () {
+    const menuIcon = document.querySelector(".menu-icon-img");
+    const mobileNavigation = document.querySelector(".mobile-navigation");
+    const closeIcon = document.querySelector(".close-icon");
+
+    menuIcon.addEventListener("click", function () {
+      if (mobileNavigation.style.right === "-200px") {
+        mobileNavigation.style.right = "0";
+        closeIcon.style.display = "block";
+      } else {
+        mobileNavigation.style.right = "-200px";
+        closeIcon.style.display = "none";
+      }
+    });
+
+    closeIcon.addEventListener("click", function () {
+      mobileNavigation.style.right = "-200px";
+      closeIcon.style.display = "none";
+    });
+  });
+</script>

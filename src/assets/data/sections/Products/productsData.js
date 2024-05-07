@@ -1,0 +1,51 @@
+const productsData = [
+  {
+    modelName: "Mirage Nex",
+    modelCharacteristic: "1 TON|F/C 220V",
+    modelPrice: "$ 5,200 MXN",
+    modelImg: "",
+    modelImgAlt: "Mirage Nex",
+    modelMessage: "Precio neto | Solo equipo",
+  },
+  {
+    modelName: "Mirage Inverter V32",
+    modelCharacteristic: "1 TON|F/C 220V",
+    modelPrice: "$ 6990 MXN",
+    modelImg: "",
+    modelImgAlt: "Mirage Inverter V32",
+    modelMessage: "Precio neto | Incluye instalación básica",
+  },
+  {
+    modelName: "Mirage Inverter X32",
+    modelCharacteristic: "1 TON|F/C 220V",
+    modelPrice: "$ 6,450 MXN",
+    modelImg: "",
+    modelImgAlt: "Mirage Inverter X32",
+    modelMessage: "Precio neto | Solo equipo",
+  },
+  {
+    modelName: "Mirage Magnum 22",
+    modelCharacteristic: "1 TON|F/C 220V",
+    modelPrice: "$ 9,150 MXN",
+    modelImg: "",
+    modelImgAlt: "Mirage Magnum 22",
+    modelMessage: "Precio neto | Solo equipo",
+  },
+  {
+    modelName: "Mirage Nex",
+    modelCharacteristic: "1 TON|F/C 220V",
+    modelPrice: "$ 5,200 MXN",
+    modelImg: "",
+    modelImgAlt: "Mirage Nex",
+    modelMessage: "Precio neto | Solo equipo",
+  },
+  {
+    modelName: "Mirage Inverter V32",
+    modelCharacteristic: "1 TON|F/C 220V",
+    modelPrice: "$ 6990 MXN",
+    modelImg: "",
+    modelImgAlt: "Mirage Inverter V32",
+    modelMessage: "Precio neto | Incluye instalación básica",
+  },
+];
+export default productsData;

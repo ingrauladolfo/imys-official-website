@@ -1,0 +1,50 @@
+---
+import servicesData from "@/assets/data/sections/Services/servicesData";
+import type { ServicesDataInfo } from "@/assets/ts/ServicesDataInfo";
+
+const services: ServicesDataInfo[] = servicesData;
+---
+
+<section id="services" class="py-8">
+  <div class="container mx-auto">
+    <!-- Título y texto -->
+     <div
+      class="grid grid-cols-1 md:grid-cols-2 gap-8 items-center justify-center opacity-75"
+    >
+      <div>
+        <h2 class="text-3xl font-bold ml-10 text-center md:text-left">Servicios</h2>
+      </div>
+      <div>
+        <p class="text-2xl text-center mr-10 md:text-left">Descubre la diferencia que<br/>la calidad puede hacer</p>
+      </div>
+    </div>
+    <!-- Cards -->
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-8 mt-8">
+      {
+        services.map(({imgUrl, imgAlt, titleService, subtitleService,linkService})=>(
+        <div style="background:#d9e3e4 0% 0% no-repeat padding-box; box-shadow:0px 3px 30px #00000029; border-radius:75px;">
+          <!-- Imagen de encabezado -->
+        <img
+          src={imgUrl}
+          alt={imgAlt}
+          class="w-full h-auto" style="background:#d9e3e4 0% 0% no-repeat padding-box; box-shadow:0px 3px 30px #00000029; border-radius:75px;"
+        />
+
+       <!-- Contenido -->
+       <div class="p-6 text-center">
+        <!-- Contenido de la tarjeta -->
+        <h2 class="text-2xl font-semibold mb-2">{titleService}</h2>
+        <p class="text-gray-600 mb-4">{subtitleService}</p>
+        <a href={linkService} target="_blank"  style="background:#1DAA63 0% 0% no-repeat padding-box; box-shadow:0px 3px 10px #00000029; border-radius:50px;"
+                    class="inline-block px-8 py-4 text-white font-semibold rounded-full">
+          Más detalles
+        </a>
+      </div>
+
+      </div>
+
+        ))
+      }
+    </div>
+  </div>
+</section>

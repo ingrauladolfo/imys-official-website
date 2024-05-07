@@ -1,0 +1,62 @@
+---
+import heroData from "@/assets/data/sections/Hero/heroData";
+import type { HeroDataInfo } from "@/assets/ts/HeroDataInfo";
+import "@/assets/styles/sections/Hero/hero.css";
+
+const hero: HeroDataInfo[] = heroData;
+---
+
+<section
+  class="bg-cover bg-center"
+  style="background-image: url('/living-room.jpeg'); background-position: top;"
+>
+  <div
+    class="grid max-w-screen-xl px-4 py-8 mx-auto lg:gap-8 xl:gap-0 lg:py-16 lg:grid-cols-12"
+  >
+    <div class="mr-auto place-self-center lg:col-span-7">
+      <h1
+        class="max-w-2xl mb-4 text-4xl font-extrabold tracking-tight leading-none md:text-5xl xl:text-6xl text-[#000000] opacity-75"
+      >
+        Vive Fresco, gasta menos
+      </h1>
+
+      <p
+        class="max-w-2xl mb-6 font-light text-black lg:mb-8 md:text-lg lg:text-xl"
+      >
+        Compra ahora tu minisplit, entrega inmediata e instalación el mismo día
+      </p>
+      <a
+        href="https://api.whatsapp.com/send?phone=%2B5218331935879&context=ARB2oy3orZLHpLmMZ59T0gyY3oTa0IRaK1tvbcxYxTa7JqKUfKg4bSBqSa1xiRkw090mhsrrdLDmuil6xlXc5juFvQE9kPrizKHPOaeHJ-H1oqI7HP4GTopK8muH2hJtVRWZLt6QeLMJKecgHGwzNVQwdg&source=FB_Page&app=facebook&entry_point=page_cta"
+        target="_blank"
+        class="bg-transparent inline-flex items-center justify-center px-10 py-3 text-base font-medium text-center text-black border border-black border-5 rounded-full hover:bg-white focus:ring-4 focus:ring-gray-100 dark:text-white dark:focus:ring-gray-800"
+      >
+        <i
+          class="bx bxl-whatsapp w-6 h-6 m-auto text-black"
+          style="font-size:24px;"></i>
+      </a>
+
+      <a
+        href="tel:528331935879"
+        target="_blank"
+        class="bg-transparent inline-flex items-center justify-center px-10 py-3 text-base font-medium text-center text-black border border-black border-5 rounded-full hover:bg-white focus:ring-4 focus:ring-gray-100 dark:text-white dark:focus:ring-gray-800"
+      >
+        <i class="bx bx-phone w-6 h-6 m-auto text-black" style="font-size:24px;"
+        ></i>
+      </a>
+    </div>
+    <div class="mt-5 lg:mt-0 lg:col-span-5 lg:flex">
+      <img src="/mirage-v32.webp" alt="mockup" />
+    </div>
+  </div>
+
+  <!-- Botón con flecha hacia abajo al final de la sección -->
+  <div class="flex justify-center mt-8">
+    <a
+      href="#about"
+      class="bg-transparent inline-flex items-center justify-center px-5 py-3 text-base mb-12 font-medium text-center text-black border border-black border-5 rounded-full hover:bg-white focus:ring-4 focus:ring-gray-100 dark:text-white dark:focus:ring-gray-800"
+    >
+      <i class="bx bx-down-arrow-alt ml-2 text-black" style="font-size:24px;"
+      ></i>
+    </a>
+  </div>
+</section>

@@ -1,0 +1,48 @@
+---
+import somosIMYSData from "@/assets/data/sections/About/somosIMYSData";
+import "@/assets/styles/sections/About/about.css";
+import type { SomosIMYSDataInfo } from "@/assets/ts/SomosIMYSDataInfo";
+const aboutData: SomosIMYSDataInfo[] = somosIMYSData;
+---
+
+<section
+  id="about"
+  class="py-8"
+  style="background: #d9e3e4 0% 0% no-repeat padding-box;"
+>
+  <div class="container mx-auto">
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+      <!-- Primer elemento con imagen -->
+      <div class="flex items-center justify-center mt-4">
+        <div class="w-full lg:ml-[100px]">
+          <img
+            src="/logo.png"
+            class="w-[300px] h-auto rounded-lg mx-auto sm:mx-0"
+            alt="Logo"
+          />
+        </div>
+      </div>
+
+      <!-- Segundo elemento con texto -->
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-4 lg:ml-[-100px]">
+        {
+          aboutData.map(({ imgUrl, imgAlt, text }) => (
+            <div class="flex items-center justify-center ">
+              <img
+                src={imgUrl}
+                class="w-8 h-auto rounded-lg mr-2"
+                alt={imgAlt}
+              />
+              <p class="text-lg md:text-xl max-w-xs md:max-w-none overflow-hidden overflow-ellipsis">
+                {text}{" "}
+              </p>
+            </div>
+          ))
+        }
+        <!-- Primer par de elementos -->
+
+        <!-- Puedes agregar más pares de elementos aquí si es necesario -->
+      </div>
+    </div>
+  </div>
+</section>
