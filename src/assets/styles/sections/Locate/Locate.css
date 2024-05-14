@@ -1,0 +1,50 @@
+.section-locate {
+  margin-top: 70px;
+  width: 100%;
+  height: 450px;
+}
+
+.article-map {
+  background-image: url("/mapa.webp");
+  width: 80%;
+  height: 400px;
+  margin: 0 auto;
+  border-radius: 80px;
+}
+
+.info {
+  padding: 120px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+.info h1 {
+  font-size: 40px;
+  font-weight: bold;
+}
+.ubicacion {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+
+.ubicacion h5 {
+  font-size: 25px;
+  font-weight: bold;
+}
+@media screen and (max-width: 768px) {
+  .article-map {
+    width: 350px;
+    height: 200px;
+    padding: 0;
+  }
+  .info {
+    padding: 25px;
+  }
+  .info h1 {
+    font-size: 18px;
+  }
+  .ubicacion h5 {
+    font-size: 15px;
+  }
+}
