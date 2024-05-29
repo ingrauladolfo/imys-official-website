@@ -1,0 +1,39 @@
+---
+import "@/assets/styles/sections/Services/services.css";
+import servicesData from "@/assets/data/sections/Services/servicesData";
+import type { ServicesDataInfo } from "@/assets/ts/ServicesDataInfo";
+const services: ServicesDataInfo[] = servicesData;
+---
+
+<section>
+  <header class="header-services">
+      <img src="/assets/icons/aire-acondicionado.png" alt="" />
+      <article class="header-services-art">
+        <h2>Servicios</h2>
+        <span>Descubre la diferencia que la calidad puede hacer</span>
+      </article>
+  </header>
+
+  <article class="article-services">
+    {
+      services.map(({imgUrl, imgAlt, titleService, description,link})=>(
+      <a href={link} class="link">
+        <section class="card-section">
+        <!-- Imagen de encabezado -->
+          <img src={imgUrl} alt={imgAlt}/>
+            <!-- Contenido -->
+        <div class="div-contenido-tarjeta">
+              <!-- Contenido de la tarjeta -->
+              <h1>{titleService}</h1>
+        </div>
+
+        <div class="saber-mas">
+          <span>{description}</span>
+        </div>
+    </section>
+      </a>
+      ))
+    }
+
+  </article>
+</section>

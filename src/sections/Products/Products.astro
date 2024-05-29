@@ -1,0 +1,67 @@
+---
+import productsData from "@/assets/data/sections/Products/productsData";
+import type { ProductsDataInfo } from "@/assets/ts/ProductsDataInfo";
+import  '@/assets/styles/sections/Products/products.css'
+const products: ProductsDataInfo[] = productsData;
+---
+
+<section class="section-models" id="models">
+  <header class="header-models">
+    <div>
+      <h1>Modelos disponibles</h1>
+    </div>
+    <h3 class="text-balance">
+      Entrega inmediata el mismo día para más información envíanos un mensaje y
+      con gusto te atenderemos
+    </h3>
+  </header>
+
+
+  <section class="section-card-models">
+    {
+      products.map(
+        ({
+          modelCharacteristic,
+          modelImg,
+          modelImgAlt,
+          modelMessage,
+          modelName,
+          modelPrice,
+        }) => (
+          <article class="article-card">
+              <h2>
+                {modelName}
+                
+              </h2>
+               <div class="characteris-price">
+                <h3>
+                    {modelCharacteristic}
+                </h3>          
+                  <p>
+                    {modelPrice}
+                  </p>
+               </div>
+               
+                  <img
+                    src={modelImg}
+                    alt={modelImgAlt}
+                 
+                  />
+              
+              
+                <div class="contacto">
+                  <a
+                  href=`https://wa.me/5218331935879?text=Me%20interesa%20comprar%20ahora%20el%20modelo%20${modelName}%20de%20${modelCharacteristic}`
+                  target="_blank">
+                  Ordenar ahora
+                </a>
+                <p>{modelMessage}</p>
+                </div>
+          </article>
+        )
+      )
+      }
+  </section>
+
+  
+</section>

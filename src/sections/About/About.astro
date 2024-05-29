@@ -1,0 +1,23 @@
+---
+import somosIMYSData from "@/assets/data/sections/About/somosIMYSData";
+import "@/assets/styles/sections/About/about.css";
+import type { SomosIMYSDataInfo } from "@/assets/ts/SomosIMYSDataInfo";
+const aboutData: SomosIMYSDataInfo[] = somosIMYSData;
+---
+
+<section class="section-figure">
+  <figure class="img-about">
+    <img src="/logo-header.png"  alt="Logo" />
+  </figure>
+
+  <article class="article-about">
+    {
+      aboutData.map(({ imgUrl, imgAlt, text }) => (
+        <aside class="aside-about">
+          <img src={imgUrl} alt={imgAlt} class="icon-about" />
+          <p class="text-balance">{text}</p>
+        </aside>
+      ))
+    }
+  </article>
+</section>

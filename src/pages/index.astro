@@ -1,0 +1,29 @@
+---
+import About from "@/sections/About/About.astro";
+import Layout from "../layouts/Layout.astro";
+import Services from "@/sections/Services/Services.astro";
+import Hero from "@/sections/Hero/Hero.astro";
+import Products from "@/sections/Products/Products.astro";
+import LocateUs from "@/sections/LocateUs/LocateUs.astro";
+import Footer from "@/sections/Footer/Footer.astro";
+---
+
+<Layout
+  title="Sitio oficial | IMYS"
+  description="Somos una empresa comprometida con nuestros clientes, la cual ofrece servicios y materiales de calidad a un excelente precio.​"
+>
+  <Hero />
+  <Services />
+  <About />
+  <Products />
+  <LocateUs />
+  <Footer/>
+</Layout>
+
+
+<style is:global>
+
+html{
+  scroll-behavior: smooth;
+}
+</style>

@@ -1,0 +1,62 @@
+---
+import "@/assets/styles/sections/Footer/Footer.css";
+import headerSocialData from "@/assets/data/components/Header/headerSocialData";
+import type { HeaderSocialDataInfo } from "@/assets/ts/HeaderSocialDataInfo";
+
+const redes: HeaderSocialDataInfo[] = headerSocialData;
+---
+
+<footer>
+  <img src="/logo-header.png" alt="" class="img-fot" />
+  <section class="sect-fot">
+    <div class="redes-fot">
+      <div class="number-correo">
+        <a href="" target="_blank">imys.electrico@homail.com</a>
+        <a href="" target="_blank">+52 <span>833 400 4047</span></a>
+        <a href="" target="_blank">+52 <span>833 193 5879</span></a>
+      </div>
+      <div class="social-link">
+        {
+          redes.map(({ socialLink, socialClass }) => (
+            <a href={socialLink} target="_blank">
+              <i class={socialClass} />
+            </a>
+          ))
+        }
+      </div>
+    </div>
+
+    <div class="inicio-fot">
+      <h4>Inicio</h4>
+      <ul>
+        <a href=""> <li>Servicios</li></a>
+        <a href=""> <li>Satisfacción Imys</li></a>
+        <a href=""> <li>Tienda</li></a>
+        <a href=""><li>Entrega a domicilo</li></a>
+        <a href=""> <li>Nosotros</li></a>
+      </ul>
+    </div>
+    <div class="contacto-fot">
+      <h4>Contacto</h4>
+      <ul>
+        <li>La Pedrera, Tamps.</li>
+        <li>89603, Altamira, Tamaulipas</li>
+      </ul>
+    </div>
+  </section>
+
+  <div class="disenador">
+    <hr class="hr" />
+
+    <img src="/assets/icons/aire-acondicionado.png" alt="" />
+
+    <div class="info-dise">
+      <h2>Desarrollado por</h2>
+      <span>X</span>
+    </div>
+
+    <img src="/assets/icons/aire-acondicionado.png" alt="" />
+
+    <hr class="hr" />
+  </div>
+</footer>

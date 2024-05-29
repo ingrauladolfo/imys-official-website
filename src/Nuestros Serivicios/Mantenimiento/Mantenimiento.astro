@@ -1,0 +1,22 @@
+---
+import "@/Nuestros Serivicios/styles/sections/Mantenimiento/Mantenimiento.css"
+import mantenimiento from "@/Nuestros Serivicios/Data/DataMantenimiento";
+import type { Mantenimiento } from "@/Nuestros Serivicios/ts/manteminiento";
+const mante: Mantenimiento[] = mantenimiento;
+---
+
+<section class="section-mantenimiento">
+  <h1>Los servicos de mantenimiento indsutrial incluyen:</h1>
+
+  <div class="div-mant">
+   {
+ mante.map(({image,text})=>(
+  <article class="arti-mant">
+    <img src={image} alt={image}>
+      <p>{text}</p>
+  </article>
+ ))
+ 
+  }
+  </div>
+</section>

@@ -1,0 +1,22 @@
+---
+import NuestroServicios from "@/Nuestros Serivicios/Hero/NuestroServicios.astro";
+import Mantenimiento from "@/Nuestros Serivicios/Mantenimiento/Mantenimiento.astro";
+import Layout from "@/layouts/Layout.astro";
+import Somos from "@/Nuestros Serivicios/Somos/Somos.astro";
+import Footer from "@/sections/Footer/Footer.astro";
+---
+
+<Layout
+  title="Nuestros servicios"
+  description="Somos una empresa comprometida con nuestros clientes, la cual ofrece servicios y materiales de calidad a un excelente precio."
+>
+  <NuestroServicios />
+  <Mantenimiento />
+  <Somos />
+  <Footer />
+</Layout>
+<style is:global>
+  html {
+    scroll-behavior: smooth;
+  }
+</style>

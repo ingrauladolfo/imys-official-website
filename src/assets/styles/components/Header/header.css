@@ -1,0 +1,134 @@
+header {
+  background: #ffffff 0% 0% no-repeat padding-box;
+  padding: 10px 20px;
+}
+
+.navbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  height: 80px;
+}
+
+.logo img {
+  max-width: 100px;
+}
+
+.navigation a {
+  color: #000000;
+  text-decoration: none;
+  padding: 15px 40px;
+  font-weight: 600;
+}
+.navigation a:hover,
+.navigation a.active {
+  background: black 0% 0% no-repeat padding-box;
+  border: 1px solid #707070;
+  border-radius: 20px;
+  color: white;
+}
+
+.span-IMYS {
+  font-weight: 600;
+}
+
+.social-media a {
+  max-width: 30px;
+  margin-left: 10px;
+  color: #000000;
+  display: inline-block; /* Para asegurar que los íconos de redes sociales se muestren en línea */
+}
+
+/* .social-media img {
+  max-width: 30px;
+  margin-left: 10px;
+} */
+
+.menu-icon {
+  display: none; /* Ocultar el icono del menú por defecto */
+}
+
+.mobile-navigation {
+  display: none; /* Ocultar el menú de navegación móvil por defecto */
+}
+
+@media screen and (max-width: 768px) {
+  .navigation,
+  .social-media {
+    display: none; /* Ocultar la navegación y las redes sociales en pantallas móviles */
+  }
+
+  .menu-icon {
+    display: block; /* Mostrar el icono del menú en pantallas móviles */
+  }
+
+  .mobile-navigation {
+    display: flex;
+    flex-direction: column;
+    background: white 0% 0% no-repeat padding-box;
+    position: fixed;
+    top: 0;
+    right: -200px; /* Ocultar inicialmente el menú móvil fuera de la pantalla */
+    width: 200px;
+    height: 100vh;
+    padding-top: 60px;
+    transition: right 0.3s ease; /* Agregar transición para animar la apertura y cierre del menú */
+    z-index: 999; /* Asegurar que el menú esté por encima de otros elementos */
+  }
+
+  .mobile-navigation .navigation {
+    display: flex; /* Mostrar la navegación en el menú de navegación móvil */
+    flex-wrap: wrap;
+    flex-direction: column;
+  }
+  .mobile-navigation .navigation a:hover,
+  .mobile-navigation .navigation a.active {
+    background: black 0% 0% no-repeat padding-box;
+    border: 1px solid #707070;
+    border-radius: 20px;
+    color: white;
+  }
+
+  .mobile-navigation .social-media {
+    right: 50%;
+    display: flex; /* Cambiado a flex para aplicar flex-wrap */
+    justify-content: center; /* Centra los íconos horizontalmente */
+    flex-wrap: wrap; /* Permite que los elementos se envuelvan en varias líneas */
+  }
+
+  .mobile-navigation .social-media a {
+    max-width: calc(
+      50% - 20px
+    ); /* Establece el ancho máximo para que quepan 2 elementos por fila */
+    margin: 0 10px 10px 10px; /* Agrega margen entre los íconos */
+  }
+
+  .menu-icon {
+    position: absolute;
+    right: 10px;
+    cursor: pointer;
+    color: #000000;
+    font-size: 1.5em;
+  }
+
+  .menu-icon i {
+    color: #000000;
+    font-size: 30px;
+    margin-right: 20px; /* Agregar espacio entre el icono del menú y el logo */
+  }
+
+  .close-icon {
+    position: absolute;
+    top: 30px;
+    left: 50%;
+    transform: translateX(-50%); /* Centra el icono horizontalmente */
+    cursor: pointer;
+    color: #000000;
+    font-size: 1.5em;
+    display: none; /* Ocultar el icono de cierre por defecto */
+  }
+
+  .close-icon:hover {
+    color: #ccc;
+  }
+}
